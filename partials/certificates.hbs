@@ -1,0 +1,21 @@
+{{#if resume.certificates}}
+<section class="section mb-3">
+  <h4 class="section-title mb-3">
+    {{bootstrapIcon 'patch-check-fill'}}Certificates
+  </h4>
+
+  <div class="section-content">
+    {{#resume.certificates}}
+    <div class="d-flex flex-column mb-3">
+      <div class="d-flex justify-content-between">
+        <h6 class="certificate">
+          {{#if url}}<a href="{{url}}" target="_blank">{{/if}}{{name}}{{#if url}}</a>{{/if}}
+        </h6>
+        <div class="time fst-italic">{{year date}}</div>
+      </div>
+      <h6 class="issuer">Issued by {{issuer}}</h6>
+    </div>
+    {{/resume.certificates}}
+  </div>
+</section>
+{{/if}}

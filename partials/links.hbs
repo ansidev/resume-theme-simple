@@ -1,0 +1,14 @@
+{{#resume.basics}}
+<div class="widget">
+  <h6 class="widget-title mb-2">Links</h6>
+  <div class="widget-content">
+    <ul class="list-unstyled">
+      {{#if url}}<li class="website"><i class="fa fa-globe"></i><a href="{{url}}" target="_blank">Personal website</a></li>{{/if}}
+      {{#each profiles}}
+      <li class="{{toLowerCase network}}"><i class="fa fa-{{toLowerCase network}}"></i><a href="{{url}}"
+          target="_blank">{{network}}</a></li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
+{{/resume.basics}}

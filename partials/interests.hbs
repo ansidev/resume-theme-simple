@@ -1,0 +1,15 @@
+{{#if resume.interests}}
+<div class="widget">
+  <h6 class="widget-title mb-2">Interests</h6>
+  <div class="widget-content">
+    <ul class="list-unstyled">
+      {{#resume.interests}}
+      <li class="interest">{{name}}</li>
+      {{/resume.interests}}
+      {{#if resume.secretCode}}
+      <span class="text-white text-secret-code">{{resume.secretCode}}</span>
+      {{/if}}
+    </ul>
+  </div>
+</div>
+{{/if}}

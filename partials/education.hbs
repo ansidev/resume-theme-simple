@@ -1,0 +1,31 @@
+{{#if resume.education}}
+<section class="section mb-3">
+  <h4 class="section-title mb-3">
+    {{bootstrapIcon 'mortarboard-fill'}}Education
+  </h4>
+
+  <div class="section-content">
+    {{#resume.education}}
+    <div class="d-flex flex-column">
+      <div class="d-flex justify-content-between">
+        <h5 class="institution">
+          {{#if url}}<a href="{{url}}" target="_blank">{{/if}}{{institution}}{{#if url}}</a>{{/if}}
+        </h5>
+        <div class="time fst-italic">{{year startDate}} - {{year endDate}}</div>
+      </div>
+      <h6 class="degree">{{studyType}}'s Degree</h6>
+      {{#if courses}}
+      <div class="details">
+        <p class="mb-0">Courses:</p>
+        <ul>
+          {{#each courses}}
+          <li class="courses">{{this}}</li>
+          {{/each}}
+        </ul>
+      </div>
+      {{/if}}
+    </div>
+    {{/resume.education}}
+  </div>
+</section>
+{{/if}}
