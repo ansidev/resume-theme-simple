@@ -23,10 +23,17 @@ Please checkout an [example project](https://github.com/ansidev/resume-cli-examp
 |   |       |-- scripts.js: Optional front-end script bundle.
 |   |-- partials: partial files.
 |   |-- resume.hbs: Main resume template.
-|-- helper.go: helper functions.
-|-- theme.go
-|-- theme_test.go
+|-- helpers.go: helper functions.
 ```
+
+## Helpers
+
+- `bootstrapIcon`
+- `joinArray`
+- `markdown`
+- `displayUrl`
+- `toLowerCase`
+- `year`
 
 ## Contact
 
