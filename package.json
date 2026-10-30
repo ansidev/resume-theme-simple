@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "dev": "chokidar \"./assets/css/resume.css\" -c \"pnpm run build\"",
-    "build": "postcss ./assets/css/resume.css > ./assets/css/styles.css"
+    "dev": "chokidar \"./resources/assets/css/resume.css\" -c \"pnpm run build\"",
+    "build": "postcss ./resources/assets/css/resume.css > ./resources/assets/css/styles.css"
   },
   "devDependencies": {
     "chokidar-cli": "^3.0.0",

@@ -1,0 +1,3 @@
+name: resume-theme-simple
+templateEngine: handlebars
+helpers: helpers.go

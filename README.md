@@ -13,13 +13,17 @@ Please checkout an [example project](https://github.com/ansidev/resume-cli-examp
 ### Theme structure
 
 ```
-|-- assets
-|   |-- css
-|       |-- resume.css: Resume CSS styles.
-|       |-- styles.css: Generated file. DO NOT EDIT.
-|-- helpers.go: helper functions.
-|-- partials: partial files.
-|-- resume.hbs: Main resume template.
+|-- theme.yaml: Theme manifest for the current Resume CLI.
+|-- resources
+|   |-- assets
+|   |   |-- css
+|   |   |   |-- resume.css: Resume CSS source.
+|   |   |   |-- styles.css: Generated file. DO NOT EDIT.
+|   |   |-- js
+|   |       |-- scripts.js: Optional front-end script bundle.
+|   |-- partials: partial files.
+|   |-- resume.hbs: Main resume template.
+|-- helper.go: helper functions.
 |-- theme.go
 |-- theme_test.go
 ```
