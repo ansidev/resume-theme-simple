@@ -95,7 +95,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          # pnpm-lock.yaml makes the action pick pnpm, which is not installed on the runner.
-          packageManager: npm
+          # pnpm is set up earlier in this workflow; npm fails installing wrangler on the runner.
+          packageManager: pnpm
           command: pages deploy dist --branch=main --project-name=${{ vars.CLOUDFLARE_PAGES_PROJECT_NAME }}
           gitHubToken: ${{ github.token }}
