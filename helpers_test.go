@@ -38,7 +38,7 @@ func TestHelpers(t *testing.T) {
 		{"displayUrl http", displayUrlHelper("http://example.com"), "example.com"},
 		{"displayUrl https", displayUrlHelper("https://example.com/x"), "example.com/x"},
 		{"toLowerCase", toLowerCaseHelper("AbC"), "abc"},
-		{"networkIcon pdf resume", raymond.SafeString(networkIconHelper("PDF resume")), "file-earmark-pdf"},
+		{"networkIcon pdf resume", raymond.SafeString(networkIconHelper("PDF resume")), "filetype-pdf"},
 		{"networkIcon passthrough", raymond.SafeString(networkIconHelper("GitHub")), "github"},
 		{"year", yearHelper("2023-05-17"), "May 2023"},
 		{"year empty", yearHelper(""), "Present"},

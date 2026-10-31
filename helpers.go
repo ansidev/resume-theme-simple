@@ -53,7 +53,7 @@ func toLowerCaseHelper(str string) raymond.SafeString {
 func networkIconHelper(network string) string {
 	switch strings.ToLower(network) {
 	case "pdf", "pdf resume", "cv", "resume":
-		return "file-earmark-pdf"
+		return "filetype-pdf"
 	}
 	return strings.ToLower(network)
 }
