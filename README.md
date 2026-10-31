@@ -59,6 +59,20 @@ resume generate --config demo/resume.config.yaml --format html --output dist/ind
 resume generate --config demo/resume.config.yaml --format pdf --output dist/static/resume.pdf
 ```
 
+### Demo deployment
+
+The demo is built and deployed to Cloudflare Pages by the [`deploy-demo`](.github/workflows/deploy-demo.yml) workflow on every push to `main`, and built only (no deploy) on pull requests and manual runs. The generated demo is always uploaded as the `resume-demo` workflow artifact.
+
+The workflow requires the following repository settings to be configured manually (Settings → Secrets and variables → Actions):
+
+| Type | Name | Purpose |
+| ---- | ---- | ------- |
+| Secret | `CLOUDFLARE_API_TOKEN` | Cloudflare API token with permission to edit Cloudflare Pages. |
+| Secret | `CLOUDFLARE_ACCOUNT_ID` | Cloudflare account ID. |
+| Variable | `CLOUDFLARE_PAGES_PROJECT_NAME` | Cloudflare Pages project to deploy to (e.g. `resume-theme-simple-demo`). |
+
+Deployment uses [wrangler-action](https://github.com/cloudflare/wrangler-action); the demo URL is `https://resume-theme-simple-demo.pages.dev`.
+
 ### Helper functions
 
 [`helpers.go`](/helpers.go) is interpreted by Resume CLI at runtime (with [yaegi](https://github.com/traefik/yaegi)).
