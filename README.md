@@ -63,7 +63,7 @@ resume generate --config demo/resume.config.yaml --format pdf --output dist/stat
 
 [`helpers.go`](/helpers.go) is interpreted by Resume CLI at runtime (with [yaegi](https://github.com/traefik/yaegi)).
 Its `Funcs() map[string]interface{}` function returns the template helpers: `bootstrapIcon`, `joinArray`,
-`markdown`, `displayUrl`, `toLowerCase` and `year`. The file must stay self-contained (single file, standard library,
+`markdown`, `displayUrl`, `toLowerCase`, `networkIcon` and `year`. The file must stay self-contained (single file, standard library,
 `github.com/mailgun/raymond/v2` and `github.com/yuin/goldmark` only).
 
 > **Security:** helper code runs with the full privileges of the CLI process. It runs automatically for `local` themes. For `remote` themes, pass `--allow-remote-helpers` as described above.

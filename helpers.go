@@ -50,6 +50,14 @@ func toLowerCaseHelper(str string) raymond.SafeString {
 	return raymond.SafeString(strings.ToLower(str))
 }
 
+func networkIconHelper(network string) string {
+	switch strings.ToLower(network) {
+	case "pdf", "pdf resume", "cv", "resume":
+		return "file-earmark-pdf"
+	}
+	return strings.ToLower(network)
+}
+
 func yearHelper(str string) raymond.SafeString {
 	if str == "" {
 		return "Present"
@@ -70,6 +78,7 @@ func Funcs() map[string]interface{} {
 		"markdown":      markdownHelper,
 		"displayUrl":    displayUrlHelper,
 		"toLowerCase":   toLowerCaseHelper,
+		"networkIcon":   networkIconHelper,
 		"year":          yearHelper,
 	}
 }
